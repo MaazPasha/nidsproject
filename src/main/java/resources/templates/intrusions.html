@@ -1,0 +1,20 @@
+<!-- src/main/resources/templates/intrusions.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detected Intrusions</title>
+</head>
+<body>
+    <h1>Detected Intrusions</h1>
+    <ul>
+        <!-- Loop through packets and display them -->
+        <li th:each="packet : ${packets}">
+            <span th:text="${packet}"></span>
+        </li>
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
